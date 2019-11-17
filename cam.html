@@ -1,0 +1,28 @@
+<html>
+    <title>VLC Mozilla plugin test page</title>
+    <body>
+    <embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org"
+       width="320"
+       height="240"
+       target="rtsp://micromec.webhop.org:88/user=admin&password=&channel=1&stream=1.sdp?"
+       id="vlc" />
+    <script type="text/javascript">
+    <!--
+    var vlc = document.getElementById("vlc");
+vlc.audio.toggleMute();
+//-->
+</script>
+</body>
+</html>
+
+
+<OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"
+     codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab"
+     width="640" height="480" id="vlc" events="True">
+   <param name="Src" value="rtsp://micromec.webhop.org:88/" />
+   <param name="ShowDisplay" value="True" />
+   <param name="AutoLoop" value="False" />
+   <param name="AutoPlay" value="True" />
+   <embed id="vlcEmb"  type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" width="640" height="480"
+     target="rtsp://micromec.webhop.org:88/" ></embed>
+</OBJECT>
